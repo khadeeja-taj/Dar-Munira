@@ -5,6 +5,12 @@
 
 generator client {
   provider = "prisma-client-js"
+  // "native" builds the engine for local dev. The rhel-openssl targets are the
+  // AWS Lambda runtimes that Netlify/Vercel serverless functions run on — both
+  // are included so the query engine is always found in production (this avoids
+  // the classic "Query engine library for current platform could not be found"
+  // error). Harmless for local SQLite development.
+  binaryTargets = ["native", "rhel-openssl-1.0.x", "rhel-openssl-3.0.x"]
 }
 
 datasource db {
