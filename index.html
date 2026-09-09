@@ -1,237 +1,160 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Fern & Petal Café — a cozy pastel garden café serving fresh coffee, pastries and brunch." />
-  <meta name="author" content="khadeeja taj" />
-  <title>Fern &amp; Petal Café</title>
-  <link rel="stylesheet" href="styles.css" />
+    <title>Fern and Petal Cafe</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- ===== Header + Navigation ===== -->
-  <header class="site-header">
-    <div class="brand">
-      <span class="logo">🌿</span>
-      <h1>Fern &amp; Petal Café</h1>
-      <p class="tagline">Coffee, blooms &amp; good mornings</p>
-    </div>
+    <!-- Header and menu -->
+    <header>
+        <h1>Fern and Petal Cafe</h1>
+        <p>Coffee, cake and cozy mornings</p>
+    </header>
 
-    <nav aria-label="Main navigation">
-      <ul class="nav-list">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#menu">Menu</a></li>
-        <li><a href="#hours">Hours</a></li>
-        <li><a href="#reserve">Reserve</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+    <nav>
+        <a href="#menu">Menu</a>
+        <a href="#hours">Hours</a>
+        <a href="#book">Book a Table</a>
+        <a href="#contact">Contact</a>
     </nav>
-  </header>
 
-  <!-- ===== Main ===== -->
-  <main>
+    <main>
 
-    <!-- Hero / intro -->
-    <section id="home" class="hero">
-      <figure>
-        <img
-          src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1200&q=80"
-          alt="Cosy garden café with pastel green walls, string lights and pink chairs" />
-        <figcaption>Our green-house patio, open all year round.</figcaption>
-      </figure>
+        <!-- Welcome part with a picture -->
+        <section>
+            <h2>Welcome to our cafe</h2>
+            <img src="cafe.jpg" alt="Our cafe" width="400">
+            <p>
+                Come and enjoy fresh coffee and homemade cakes in our little
+                garden cafe. It is a nice place to sit, relax and meet friends.
+            </p>
+        </section>
 
-      <div class="hero-text">
-        <h2>Welcome to your little green escape</h2>
-        <p>
-          Tucked under leafy vines and warm fairy lights, Fern &amp; Petal is a
-          pastel garden café where every cup is made slow and every corner is
-          made for lingering. Bring a book, bring a friend, or just bring
-          yourself.
-        </p>
-        <p><a class="btn" href="#reserve">Reserve a table</a></p>
-      </div>
-    </section>
+        <!-- Three cards for the menu -->
+        <section id="menu">
+            <h2>Our Menu</h2>
 
-    <!-- Content cards: at least 3 -->
-    <section id="menu" aria-labelledby="menu-title">
-      <h2 id="menu-title">Today's Favourites</h2>
+            <article>
+                <h3>Latte</h3>
+                <p>Hot coffee with milk. Very smooth and creamy.</p>
+                <p>Price: $4</p>
+            </article>
 
-      <div class="cards">
-        <article class="card">
-          <img
-            src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&q=80"
-            alt="Cup of latte with leaf latte art" />
-          <h3>Petal Latte</h3>
-          <p>Espresso, steamed milk and a whisper of rose. Our signature pour.</p>
-          <p class="price">$4.50</p>
-        </article>
+            <article>
+                <h3>Croissant</h3>
+                <p>Fresh and buttery, baked every morning.</p>
+                <p>Price: $3</p>
+            </article>
 
-        <article class="card">
-          <img
-            src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=600&q=80"
-            alt="Freshly baked croissants on a plate" />
-          <h3>Garden Croissant</h3>
-          <p>Buttery, flaky and baked each morning with herbs from our patio.</p>
-          <p class="price">$3.25</p>
-        </article>
+            <article>
+                <h3>Matcha</h3>
+                <p>Green tea drink with milk. Sweet and calming.</p>
+                <p>Price: $4</p>
+            </article>
+        </section>
 
-        <article class="card">
-          <img
-            src="https://images.unsplash.com/photo-1481391319762-47dff72954d9?auto=format&fit=crop&w=600&q=80"
-            alt="Matcha drink surrounded by green leaves" />
-          <h3>Fern Matcha</h3>
-          <p>Stone-ground matcha with oat milk — smooth, earthy and calming.</p>
-          <p class="price">$4.00</p>
-        </article>
-      </div>
-    </section>
+        <!-- Ordered list with letters A B C -->
+        <section>
+            <h2>How we make your coffee</h2>
+            <ol type="A">
+                <li>We take fresh coffee beans.</li>
+                <li>We grind the beans.</li>
+                <li>We add hot water and milk.</li>
+                <li>We serve it to you.</li>
+            </ol>
 
-    <!-- List: ordered list using letters (ABC) + a plain list -->
-    <section id="steps" aria-labelledby="steps-title">
-      <h2 id="steps-title">How We Brew Your Coffee</h2>
+            <h3>We also have</h3>
+            <ul>
+                <li>Oat milk</li>
+                <li>Cakes</li>
+                <li>Tea</li>
+            </ul>
+        </section>
 
-      <!-- type="A" makes the ordered list count A, B, C instead of 1, 2, 3 -->
-      <ol type="A">
-        <li>We weigh fresh, single-origin beans.</li>
-        <li>We grind them the moment you order.</li>
-        <li>We pour at just the right temperature.</li>
-        <li>We serve it with a smile and a small treat.</li>
-      </ol>
+        <!-- Table for opening hours -->
+        <section id="hours">
+            <h2>Opening Hours</h2>
+            <table border="1">
+                <tr>
+                    <th>Day</th>
+                    <th>Open</th>
+                    <th>Close</th>
+                </tr>
+                <tr>
+                    <td>Monday to Friday</td>
+                    <td>7 AM</td>
+                    <td>8 PM</td>
+                </tr>
+                <tr>
+                    <td>Saturday</td>
+                    <td>8 AM</td>
+                    <td>10 PM</td>
+                </tr>
+                <tr>
+                    <td>Sunday</td>
+                    <td>9 AM</td>
+                    <td>6 PM</td>
+                </tr>
+            </table>
+        </section>
 
-      <h3>What's always on our shelf</h3>
-      <ul>
-        <li>Locally roasted beans</li>
-        <li>Oat, almond &amp; soy milk</li>
-        <li>Gluten-free pastries</li>
-      </ul>
-    </section>
+        <!-- Form with radio and checkbox -->
+        <section id="book">
+            <h2>Book a Table</h2>
+            <form>
+                <p>
+                    <label>Name:</label>
+                    <input type="text" name="name">
+                </p>
 
-    <!-- Table: opening hours -->
-    <section id="hours" aria-labelledby="hours-title">
-      <h2 id="hours-title">Opening Hours</h2>
+                <p>
+                    <label>Email:</label>
+                    <input type="email" name="email">
+                </p>
 
-      <table>
-        <caption>We're open seven days a week</caption>
-        <thead>
-          <tr>
-            <th scope="col">Day</th>
-            <th scope="col">Opens</th>
-            <th scope="col">Closes</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">Mon – Fri</th>
-            <td>7:00 AM</td>
-            <td>8:00 PM</td>
-          </tr>
-          <tr>
-            <th scope="row">Saturday</th>
-            <td>8:00 AM</td>
-            <td>10:00 PM</td>
-          </tr>
-          <tr>
-            <th scope="row">Sunday</th>
-            <td>9:00 AM</td>
-            <td>6:00 PM</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
+                <p>
+                    <label>Number of people:</label>
+                    <input type="number" name="people">
+                </p>
 
-    <!-- Form: with checkbox AND radio -->
-    <section id="reserve" aria-labelledby="reserve-title">
-      <h2 id="reserve-title">Reserve a Table</h2>
+                <!-- Radio buttons: pick one -->
+                <p>Where do you want to sit?</p>
+                <p>
+                    <input type="radio" name="seat" value="inside"> Inside
+                    <input type="radio" name="seat" value="garden"> Garden
+                </p>
 
-      <form action="#" method="post">
-        <fieldset>
-          <legend>Your details</legend>
+                <!-- Checkboxes: pick any -->
+                <p>Do you want extras?</p>
+                <p>
+                    <input type="checkbox" name="extra" value="cake"> Cake
+                    <input type="checkbox" name="extra" value="flowers"> Flowers
+                </p>
 
-          <p>
-            <label for="name">Full name</label>
-            <input type="text" id="name" name="name" placeholder="Your name" required />
-          </p>
+                <p>
+                    <button type="submit">Book Now</button>
+                </p>
+            </form>
+        </section>
 
-          <p>
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="you@example.com" required />
-          </p>
+        <!-- Contact links -->
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Address: 12 Blossom Lane</p>
+            <p>
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+                <a href="mailto:hello@cafe.com">Email us</a>
+            </p>
+        </section>
 
-          <p>
-            <label for="guests">Number of guests</label>
-            <input type="number" id="guests" name="guests" min="1" max="12" value="2" />
-          </p>
+    </main>
 
-          <p>
-            <label for="date">Preferred date</label>
-            <input type="date" id="date" name="date" />
-          </p>
-        </fieldset>
-
-        <!-- Radio buttons: pick ONE seating area -->
-        <fieldset>
-          <legend>Seating area (choose one)</legend>
-          <p>
-            <input type="radio" id="patio" name="seating" value="patio" checked />
-            <label for="patio">Garden patio</label>
-          </p>
-          <p>
-            <input type="radio" id="indoor" name="seating" value="indoor" />
-            <label for="indoor">Cosy indoor</label>
-          </p>
-          <p>
-            <input type="radio" id="window" name="seating" value="window" />
-            <label for="window">Window seat</label>
-          </p>
-        </fieldset>
-
-        <!-- Checkboxes: pick ANY extras -->
-        <fieldset>
-          <legend>Add-ons (choose any)</legend>
-          <p>
-            <input type="checkbox" id="cake" name="extras" value="cake" />
-            <label for="cake">Slice of cake</label>
-          </p>
-          <p>
-            <input type="checkbox" id="flowers" name="extras" value="flowers" />
-            <label for="flowers">Fresh flowers on the table</label>
-          </p>
-          <p>
-            <input type="checkbox" id="newsletter" name="extras" value="newsletter" checked />
-            <label for="newsletter">Email me offers</label>
-          </p>
-        </fieldset>
-
-        <p>
-          <label for="notes">Anything else?</label><br />
-          <textarea id="notes" name="notes" rows="3" placeholder="Allergies, celebrations..."></textarea>
-        </p>
-
-        <p>
-          <button type="submit">Book my table</button>
-        </p>
-      </form>
-    </section>
-
-    <!-- Contact / links -->
-    <section id="contact" aria-labelledby="contact-title">
-      <h2 id="contact-title">Find Us</h2>
-      <p>12 Blossom Lane, Green Quarter</p>
-      <p>
-        Follow us:
-        <a href="#" rel="nofollow">Instagram</a> ·
-        <a href="#" rel="nofollow">Facebook</a> ·
-        <a href="mailto:hello@fernandpetal.example">Email us</a>
-      </p>
-    </section>
-
-  </main>
-
-  <!-- ===== Footer ===== -->
-  <footer class="site-footer">
-    <p>&copy; 2026 Fern &amp; Petal Café. Made with 🌸 by khadeeja taj.</p>
-  </footer>
+    <!-- Footer -->
+    <footer>
+        <p>Fern and Petal Cafe. Made by khadeeja taj.</p>
+    </footer>
 
 </body>
 </html>
