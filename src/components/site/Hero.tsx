@@ -39,7 +39,7 @@ export function Hero() {
                 "url(/images/building.jpg), url(/images/building.svg)",
             }}
             role="img"
-            aria-label="Dar Muneerah building"
+            aria-label="Dar Munira building"
           />
 
           {/* Diagonal overlay: dark green on the left for legible text, fading

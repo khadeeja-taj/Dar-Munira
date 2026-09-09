@@ -2,7 +2,7 @@
   "name": "dar-al-muneerah",
   "version": "1.0.0",
   "private": true,
-  "description": "Dar Al Muneerah — International Islamic University Islamabad. Bilingual (AR/EN) Islamic education platform with registration, instructor applications, and an analytics admin dashboard.",
+  "description": "Dar Al Munira — International Islamic University Islamabad. Bilingual (AR/EN) Islamic education platform with registration, instructor applications, and an analytics admin dashboard.",
   "engines": {
     "node": ">=18.18.0"
   },

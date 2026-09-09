@@ -1,4 +1,4 @@
-# Deploy Dar Muneerah to Netlify (step by step, error-free)
+# Deploy Dar Munira to Netlify (step by step, error-free)
 
 This app runs great on Netlify, but you **must** give it a hosted PostgreSQL
 database. Netlify (like all serverless hosts) has no persistent disk, so the

@@ -3,7 +3,7 @@
 import { Facebook, Mail, MessageCircle } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-// Official Dar Muneerah (IIUI) links — used as defaults so the icons always
+// Official Dar Munira (IIUI) links — used as defaults so the icons always
 // open the correct page even if the env vars are not set at build time.
 const fb =
   process.env.NEXT_PUBLIC_FACEBOOK_URL ||

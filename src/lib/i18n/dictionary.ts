@@ -20,7 +20,7 @@ export const dictionary = {
     },
     hero: {
       badge: "Excellence and mastery in teaching the Qur'an and its sciences",
-      title: "Dar Muneerah",
+      title: "Dar Munira",
       subtitle: "International Islamic University Islamabad",
       lead: "An educational house dedicated to teaching the Holy Qur'an and its sciences.",
       announce: "Registration is now open — join us today.",
@@ -30,7 +30,7 @@ export const dictionary = {
       getStarted: "Get Started",
     },
     join: {
-      kicker: "Join Dar Muneerah",
+      kicker: "Join Dar Munira",
       title: "How would you like to begin?",
       lead: "Choose the path that suits you — enroll as a student, join as a teacher, or teach with us as a visiting teacher.",
       studentTitle: "Student Registration",
@@ -42,9 +42,9 @@ export const dictionary = {
       start: "Start",
     },
     about: {
-      kicker: "About Dar Muneerah",
-      title: "About Dar Muneerah",
-      lead: "Dar Muneerah for the memorization of the Qur'an and its sciences was established under the gracious patronage of the President of the International Islamic University Islamabad, Prof. Dr. Ahmad bin Yusuf Al-Duraiwish, and a personal donation from Sheikh Hammoud Al-Dhib, a member of the University's Board of Trustees from the Kingdom of Saudi Arabia — may Allah preserve them. The foundation stone was laid at the Faculty of Usuluddin (Girls' Section) on Wednesday, 1 Sha'ban 1436 AH (20 May 2015). It was named after the mother of the donating Sheikh, to host activities dedicated to the Holy Qur'an and its sciences.",
+      kicker: "About Dar Munira",
+      title: "About Dar Munira",
+      lead: "Dar Munira for the memorization of the Qur'an and its sciences was established under the gracious patronage of the President of the International Islamic University Islamabad, Prof. Dr. Ahmad bin Yusuf Al-Duraiwish, and a personal donation from Sheikh Hammoud Al-Dhib, a member of the University's Board of Trustees from the Kingdom of Saudi Arabia — may Allah preserve them. The foundation stone was laid at the Faculty of Usuluddin (Girls' Section) on Wednesday, 1 Sha'ban 1436 AH (20 May 2015). It was named after the mother of the donating Sheikh, to host activities dedicated to the Holy Qur'an and its sciences.",
       vision: "Vision",
       visionText:
         "To prepare a distinguished Qur'anic generation — in knowledge, character, and conduct.",
@@ -92,8 +92,8 @@ export const dictionary = {
     },
     gallery: {
       kicker: "Event Gallery",
-      title: "Moments from Dar Muneerah",
-      lead: "Gatherings, sessions, and events at Dar Muneerah — in collaboration with the International Islamic University Islamabad.",
+      title: "Moments from Dar Munira",
+      lead: "Gatherings, sessions, and events at Dar Munira — in collaboration with the International Islamic University Islamabad.",
       film: "Event Film",
       watch: "Watch",
       photos: "Photographs",
@@ -195,12 +195,12 @@ export const dictionary = {
     instructor: {
       title: "Teacher Registration",
       lead: "Register to teach with us. Fields marked with * are required.",
-      note: "Note: This registration is for the teachers of Dar Muneerah.",
+      note: "Note: This registration is for the teachers of Dar Munira.",
     },
     visiting: {
       title: "Visiting Teacher Registration",
       lead: "For senior teachers who wish to teach selected courses occasionally.",
-      note: "Note: This registration is for visiting teachers of Dar Muneerah.",
+      note: "Note: This registration is for visiting teachers of Dar Munira.",
       fullName: "Full Name",
       phone: "Phone Number",
       email: "Email Address",

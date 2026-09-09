@@ -1,4 +1,4 @@
-# Netlify deploy config for Dar Al Muneerah (Next.js 14 + Prisma).
+# Netlify deploy config for Dar Al Munira (Next.js 14 + Prisma).
 #
 # The Next.js Runtime plugin below turns the App Router, API routes and
 # middleware into serverless/edge functions automatically — no extra setup.

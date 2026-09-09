@@ -1,4 +1,4 @@
-// Dar Al Muneerah — Prisma schema
+// Dar Al Munira — Prisma schema
 // Default provider is SQLite for zero-config local development.
 // For production, switch `provider` to "postgresql" (Supabase / Postgres)
 // and update DATABASE_URL. The models are portable across both.

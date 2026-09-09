@@ -1,7 +1,7 @@
-# Dar Al Muneerah — International Islamic University Islamabad
+# Dar Al Munira — International Islamic University Islamabad
 
 A modern, elegant, **bilingual (Arabic RTL / English LTR)** web platform for
-**Dar Al Muneerah**, an Islamic learning center at the International Islamic
+**Dar Al Munira**, an Islamic learning center at the International Islamic
 University Islamabad (IIUI). It provides a premium public website, multi‑step
 **student** and **instructor** registration with document uploads, a
 **news / announcements** system, and a full **analytics admin dashboard**.
@@ -137,7 +137,7 @@ building cover, so nothing is broken on first run. To use the real assets:
 
 - **Hero building photo** → drop your image at `public/images/building.jpg`.
   The hero picks it up automatically (falls back to `building.svg` until then).
-- **Logos** → the IIUI and Dar Al Muneerah logos are inline SVGs in
+- **Logos** → the IIUI and Dar Al Munira logos are inline SVGs in
   `src/components/ui/Logo.tsx`. To use real image files, place
   `public/images/dar-logo.png` / `iiui-logo.png` and swap the `<svg>` for `<img>`.
 
@@ -228,4 +228,4 @@ src/
 
 ## 📄 License
 
-Built for Dar Al Muneerah, IIUI. All rights reserved.
+Built for Dar Al Munira, IIUI. All rights reserved.

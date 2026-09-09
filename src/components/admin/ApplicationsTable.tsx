@@ -191,7 +191,7 @@ export function ApplicationsTable({ kind }: { kind: Kind }) {
     doc.setFontSize(16);
     doc.setTextColor(11, 93, 59);
     doc.text(
-      `Dar Muneerah — ${kind === "instructor" ? "Instructor" : "Student"} Applications`,
+      `Dar Munira — ${kind === "instructor" ? "Instructor" : "Student"} Applications`,
       14,
       16,
     );

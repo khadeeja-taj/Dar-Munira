@@ -80,7 +80,7 @@ export function AdminShell({
             <DarLogo className="h-8 w-8" />
           </div>
           <div>
-            <p className="font-display text-lg leading-none">Dar Muneerah</p>
+            <p className="font-display text-lg leading-none">Dar Munira</p>
             <p className="text-xs text-white/50">Admin Console</p>
           </div>
         </div>
