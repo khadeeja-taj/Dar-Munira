@@ -89,6 +89,8 @@ export type VisitingInput = z.infer<typeof visitingSchema>;
 // Admin-created visiting teacher (e.g. adding an existing/previous teacher).
 // CV is not required here, and the admin may set the status.
 export const visitingAdminSchema = visitingSchema.extend({
+  // Admin may pick any course or type a custom one ("Other").
+  course: z.string().min(1, "Select a course").max(80),
   status: z
     .enum(["PENDING", "APPROVED", "REJECTED", "ARCHIVED"])
     .default("APPROVED"),
@@ -103,9 +105,9 @@ export const instructorAdminSchema = z.object({
   phone: z.string().regex(phoneRe, "Enter a valid phone number"),
   nationality: z.string().min(2, "Required").max(60),
   employeeNo: z.string().min(1, "Required").max(40),
-  course: z.enum(instructorCourseKeys, {
-    errorMap: () => ({ message: "Select a course" }),
-  }),
+  // Admin may pick any course or type a custom one ("Other"), so accept any
+  // non-empty label rather than restricting to a fixed list.
+  course: z.string().min(1, "Select a course").max(80),
   department: z.string().max(80).optional().or(z.literal("")),
   status: z
     .enum(["PENDING", "APPROVED", "REJECTED", "ARCHIVED"])

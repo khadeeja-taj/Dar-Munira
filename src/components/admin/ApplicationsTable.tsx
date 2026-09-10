@@ -81,25 +81,43 @@ export function ApplicationsTable({ kind }: { kind: Kind }) {
   };
   const [showCreate, setShowCreate] = useState(false);
   const [createForm, setCreateForm] = useState(emptyCreate);
+  // Free-text course, used when "Other" is chosen in the Course dropdown.
+  const [customCourse, setCustomCourse] = useState("");
   const [creating, setCreating] = useState(false);
   const [createError, setCreateError] = useState<string | null>(null);
 
   async function createRecord(e: React.FormEvent) {
     e.preventDefault();
     setCreateError(null);
+
+    // Resolve the course: if "Other" was chosen, use the typed value.
+    const resolvedCourse =
+      createForm.course === "__other__"
+        ? customCourse.trim()
+        : createForm.course;
+    if (!resolvedCourse) {
+      setCreateError(
+        createForm.course === "__other__"
+          ? "Please type the course name."
+          : "Please select a course.",
+      );
+      return;
+    }
+
     setCreating(true);
     const endpoint =
       kind === "instructor" ? "/api/admin/instructors" : "/api/admin/visiting";
     const res = await fetch(endpoint, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(createForm),
+      body: JSON.stringify({ ...createForm, course: resolvedCourse }),
     });
     setCreating(false);
     if (res.ok) {
       const json = await res.json();
       setRows((prev) => [json.data, ...prev]);
       setCreateForm(emptyCreate);
+      setCustomCourse("");
       setShowCreate(false);
     } else {
       setCreateError("Please check the fields (name, email, phone and course are required).");
@@ -333,12 +351,22 @@ export function ApplicationsTable({ kind }: { kind: Kind }) {
               required
             >
               <option value="">Select…</option>
-              {courseList.map((c) => (
+              {COURSES.map((c) => (
                 <option key={c.key} value={c.key}>
                   {c.en}
                 </option>
               ))}
+              <option value="__other__">Other (type below)…</option>
             </select>
+            {createForm.course === "__other__" && (
+              <input
+                className="field-input mt-2"
+                placeholder="Type the course name"
+                value={customCourse}
+                onChange={(e) => setCustomCourse(e.target.value)}
+                required
+              />
+            )}
           </div>
           <div>
             <label className="field-label">Status</label>
