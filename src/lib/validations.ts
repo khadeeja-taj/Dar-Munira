@@ -131,10 +131,13 @@ export const loginSchema = z.object({
 export type LoginInput = z.infer<typeof loginSchema>;
 
 export const announcementSchema = z.object({
-  titleEn: z.string().min(2).max(160),
-  titleAr: z.string().min(2).max(160),
-  bodyEn: z.string().min(2).max(4000),
-  bodyAr: z.string().min(2).max(4000),
+  // Titles and bodies are all optional — a single language is enough, and a
+  // picture-only announcement is allowed. The API enforces that at least a
+  // title, some text, or a picture is present.
+  titleEn: z.string().max(160).optional().default(""),
+  titleAr: z.string().max(160).optional().default(""),
+  bodyEn: z.string().max(4000).optional().default(""),
+  bodyAr: z.string().max(4000).optional().default(""),
   category: z.enum(["news", "course", "event", "deadline", "notice"]),
   pinned: z.boolean().default(false),
   published: z.boolean().default(true),

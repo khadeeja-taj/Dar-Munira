@@ -78,12 +78,20 @@ export function News() {
                       className="mt-4 h-40 w-full rounded-xl object-cover"
                     />
                   )}
-                  <h3 className="mt-4 font-display text-xl text-emerald-deep">
-                    {lang === "ar" ? a.titleAr : a.titleEn}
-                  </h3>
-                  <p className="mt-2 line-clamp-3 text-sm leading-relaxed text-brand-muted">
-                    {lang === "ar" ? a.bodyAr : a.bodyEn}
-                  </p>
+                  {(a.titleEn || a.titleAr) && (
+                    <h3 className="mt-4 font-display text-xl text-emerald-deep">
+                      {(lang === "ar" ? a.titleAr : a.titleEn) ||
+                        a.titleEn ||
+                        a.titleAr}
+                    </h3>
+                  )}
+                  {(a.bodyEn || a.bodyAr) && (
+                    <p className="mt-2 line-clamp-3 text-sm leading-relaxed text-brand-muted">
+                      {(lang === "ar" ? a.bodyAr : a.bodyEn) ||
+                        a.bodyEn ||
+                        a.bodyAr}
+                    </p>
+                  )}
                   {a.fileMime && (
                     <a
                       href={`/api/announcements/${a.id}/file`}

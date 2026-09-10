@@ -126,7 +126,6 @@ export default function AnnouncementsPage() {
               className="field-input"
               value={form.titleEn}
               onChange={(e) => setForm({ ...form, titleEn: e.target.value })}
-              required
             />
           </div>
           <div dir="rtl">
@@ -135,7 +134,6 @@ export default function AnnouncementsPage() {
               className="field-input"
               value={form.titleAr}
               onChange={(e) => setForm({ ...form, titleAr: e.target.value })}
-              required
             />
           </div>
           <div>
@@ -145,7 +143,6 @@ export default function AnnouncementsPage() {
               rows={3}
               value={form.bodyEn}
               onChange={(e) => setForm({ ...form, bodyEn: e.target.value })}
-              required
             />
           </div>
           <div dir="rtl">
@@ -155,7 +152,6 @@ export default function AnnouncementsPage() {
               rows={3}
               value={form.bodyAr}
               onChange={(e) => setForm({ ...form, bodyAr: e.target.value })}
-              required
             />
           </div>
           <div>
@@ -270,13 +266,21 @@ export default function AnnouncementsPage() {
                 className="mt-3 h-36 w-full rounded-xl object-cover"
               />
             )}
-            <h3 className="mt-3 font-display text-lg text-emerald-deep dark:text-white">
-              {a.titleEn}
-            </h3>
-            <p className="font-arabic text-base text-teal" dir="rtl">
-              {a.titleAr}
-            </p>
-            <p className="mt-2 line-clamp-2 text-sm text-brand-muted">{a.bodyEn}</p>
+            {(a.titleEn || a.titleAr) && (
+              <h3 className="mt-3 font-display text-lg text-emerald-deep dark:text-white">
+                {a.titleEn || a.titleAr}
+              </h3>
+            )}
+            {a.titleEn && a.titleAr && (
+              <p className="font-arabic text-base text-teal" dir="rtl">
+                {a.titleAr}
+              </p>
+            )}
+            {(a.bodyEn || a.bodyAr) && (
+              <p className="mt-2 line-clamp-2 text-sm text-brand-muted">
+                {a.bodyEn || a.bodyAr}
+              </p>
+            )}
             {a.fileMime && (
               <a
                 href={`/api/announcements/${a.id}/file`}

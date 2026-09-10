@@ -89,6 +89,14 @@ export async function POST(req: Request) {
     }
   }
 
+  // Require at least something: a title (any language), body text, or a picture.
+  const hasText = [v.titleEn, v.titleAr, v.bodyEn, v.bodyAr].some(
+    (s) => s && s.trim().length > 0,
+  );
+  if (!hasText && !imageData && !fileData) {
+    return fail("Add a title, some text, or a picture.", 422);
+  }
+
   const created = await prisma.announcement.create({
     data: {
       titleEn: sanitizeText(v.titleEn),
