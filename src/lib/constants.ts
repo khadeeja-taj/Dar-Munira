@@ -112,19 +112,9 @@ export const ACADEMIC_LEVELS = [
   { key: "other", en: "Other", ar: "أخرى" },
 ] as const;
 
-// Teachers — ONLY the names provided in the brief. Shown in English (romanised)
-// in English mode and in Arabic in Arabic mode. No other details are invented.
-export const TEACHERS = [
-  { en: "Iram Naz", ar: "إرم ناز" },
-  { en: "Salma Bibi", ar: "سلمة بي بي" },
-  { en: "Namira Sultana", ar: "نمرة سلطانة" },
-  { en: "Sakina", ar: "سكينة" },
-  { en: "Fizza", ar: "فضة" },
-  { en: "Umm Ayman", ar: "أم أيمن" },
-  { en: "Kanz ul Iman", ar: "كنز الإيمان" },
-  { en: "Hajar", ar: "هاجر" },
-  { en: "Anam Zaidi", ar: "أنعم زيدي" },
-] as const;
+// Teachers are managed from the admin panel and stored in the database.
+// The public Teachers section loads them from /api/teachers (approved
+// instructor records), so nothing is shown until an admin adds a teacher.
 
 // Upload constraints
 export const ACCEPTED_MIME = [
